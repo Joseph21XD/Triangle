@@ -334,21 +334,11 @@ public class Parser {
       }
       break;
 
-      case Token.NOTHING:{
+case Token.NOTHING:{
           acceptIt();
           finish(commandPos);
           commandAST = new NothingCommand(commandPos);
       }
-      break;
-          
-    case Token.SEMICOLON:
-    case Token.END:
-    case Token.ELSE:
-    case Token.IN:
-    case Token.EOT:
-
-      finish(commandPos);
-      commandAST = new EmptyCommand(commandPos);
       break;
 
     default:
